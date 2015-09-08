@@ -1,0 +1,36 @@
+/**
+ *
+ */
+package org.training.storefront.interceptors.beforecontroller;
+
+import javax.annotation.Resource;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.springframework.ui.context.ThemeSource;
+import org.springframework.web.method.HandlerMethod;
+import org.springframework.web.servlet.ThemeResolver;
+import org.training.storefront.interceptors.BeforeControllerHandler;
+
+
+/**
+ * @author abhijit.s
+ *
+ */
+public class ThemeBeforeControllerHandler implements BeforeControllerHandler
+{
+	@Resource(name = "themeResolver")
+	private ThemeResolver themeResolver;
+
+	@Resource(name = "themeSource")
+	private ThemeSource themeSource;
+
+
+	@Override
+	public boolean beforeController(final HttpServletRequest request, final HttpServletResponse response,
+			final HandlerMethod handler) throws Exception
+	{
+		themeSource.getTheme(themeResolver.resolveThemeName(request));
+		return true;
+	}
+}

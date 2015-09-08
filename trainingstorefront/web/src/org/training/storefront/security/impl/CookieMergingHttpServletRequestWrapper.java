@@ -1,0 +1,63 @@
+/**
+ *
+ */
+package org.training.storefront.security.impl;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+import javax.servlet.http.Cookie;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletRequestWrapper;
+
+
+/**
+ * @author abhijit.s
+ *
+ */
+public class CookieMergingHttpServletRequestWrapper extends HttpServletRequestWrapper
+{
+
+	private final HttpServletRequest outerRequest;
+
+	public CookieMergingHttpServletRequestWrapper(final HttpServletRequest innerRequest, final HttpServletRequest outerRequest)
+	{
+		super(innerRequest);
+		this.outerRequest = outerRequest;
+	}
+
+	@Override
+	public Cookie[] getCookies()
+	{
+		return mergeCookies(super.getCookies(), outerRequest.getCookies());
+	}
+
+	protected Cookie[] mergeCookies(final Cookie[] savedCookies, final Cookie[] currentCookies)
+	{
+		final List<Cookie> cookies = new ArrayList<Cookie>(Arrays.asList(currentCookies));
+		for (final Cookie savedCookie : savedCookies)
+		{
+			if (!containsCookie(cookies, savedCookie.getName()))
+			{
+				cookies.add(savedCookie);
+			}
+		}
+		return cookies.toArray(new Cookie[cookies.size()]);
+	}
+
+	protected boolean containsCookie(final List<Cookie> cookies, final String cookieName)
+	{
+		if (cookies != null && !cookies.isEmpty() && cookieName != null)
+		{
+			for (final Cookie cookie : cookies)
+			{
+				if (cookieName.equals(cookie.getName()))
+				{
+					return true;
+				}
+			}
+		}
+		return false;
+	}
+}

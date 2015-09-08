@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<testclasses>
+  <trainingstorefront>
+    <testclass>org.training.storefront.filters.AnonymousCheckoutFilterTest</testclass>
+    <testclass>org.training.storefront.controllers.cms.CategoryFeatureComponentControllerTest</testclass>
+    <testclass>org.training.storefront.controllers.cms.CartSuggestionComponentControllerTest</testclass>
+    <testclass>org.training.storefront.controllers.cms.ProductReferencesComponentControllerTest</testclass>
+    <testclass>org.training.storefront.controllers.pages.SearchPageControllerUnitTest</testclass>
+    <testclass>org.training.storefront.controllers.cms.NavigationBarComponentControllerTest</testclass>
+    <testclass>org.training.storefront.interceptors.CSRFHandlerInterceptorTest</testclass>
+    <testclass>org.training.storefront.controllers.cms.ProductCarouselComponentControllerTest</testclass>
+    <testclass>org.training.storefront.controllers.cms.ProductFeatureComponentControllerTest</testclass>
+    <testclass>org.training.storefront.filters.TagResourcesAddOnFilterTest</testclass>
+    <testclass>org.training.storefront.security.impl.WebHttpSessionRequestCacheUnitTest</testclass>
+    <testclass>org.training.storefront.web.view.UiExperienceViewResolverTest</testclass>
+    <testclass>org.training.storefront.filters.AcceleratorAddOnFilterTest</testclass>
+    <testclass>org.training.storefront.controllers.cms.MiniCartComponentControllerTest</testclass>
+    <testclass>org.training.storefront.filters.AbstractAddOnFilterTest</testclass>
+    <testclass>org.training.storefront.security.cookie.EnhancedCookieGeneratorTest</testclass>
+    <testclass>org.training.storefront.interceptors.i18n.SetLanguageBeforeControllerHandlerTest</testclass>
+    <testclass>org.training.storefront.filters.CustomerLocationRestorationFilterTest</testclass>
+    <testclass>org.training.storefront.controllers.pages.CartPageControllerTest</testclass>
+    <testclass>org.training.storefront.security.impl.CartUsurpProtectionUnitTest</testclass>
+    <testclass>org.training.storefront.filters.CommonResourcesAddOnFilterTest</testclass>
+    <testclass>org.training.storefront.controllers.cms.DefaultCMSComponentControllerTest</testclass>
+    <testclass>org.training.storefront.controllers.cms.PurchasedCategorySuggestionComponentControllerTest</testclass>
+  </trainingstorefront>
+</testclasses>

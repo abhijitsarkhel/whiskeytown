@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<testclasses>
+  <trainingtest>
+    <testclass>org.training.jalo.TrainingtestTest</testclass>
+  </trainingtest>
+</testclasses>

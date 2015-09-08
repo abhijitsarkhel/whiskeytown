@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<testclasses>
+  <trainingcockpits>
+    <testclass>org.training.cockpits.cmscockpit.sitewizard.CMSSiteUtilsTest</testclass>
+    <testclass>org.training.jalo.TrainingcockpitsTest</testclass>
+    <testclass>org.training.cockpits.jalo.YAcceleratorcockpitsTest</testclass>
+  </trainingcockpits>
+</testclasses>
