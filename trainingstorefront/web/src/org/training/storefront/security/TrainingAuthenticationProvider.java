@@ -35,6 +35,7 @@ public class TrainingAuthenticationProvider extends CoreAuthenticationProvider
 	private ModelService modelService;
 	private final GrantedAuthority adminAuthority = new SimpleGrantedAuthority(ROLE_ADMIN_GROUP);
 	private CartService cartService;
+	private String adminGroup;
 
 	@SuppressWarnings("finally")
 	@Override
@@ -158,5 +159,23 @@ public class TrainingAuthenticationProvider extends CoreAuthenticationProvider
 		return adminAuthority;
 	}
 
+	/**
+	 *
+	 * @param adminGroup
+	 *           the adminGroup to set
+	 */
+	public void setAdminGroup(final String adminGroup)
+	{
+		this.adminGroup = adminGroup;
+	}
+
+	/**
+	 *
+	 * @return the adminGroup
+	 */
+	public String getAdminGroup()
+	{
+		return this.adminGroup;
+	}
 
 }

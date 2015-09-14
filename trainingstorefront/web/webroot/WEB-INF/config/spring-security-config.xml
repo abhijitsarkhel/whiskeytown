@@ -204,7 +204,7 @@
 		<property name="sessionService" ref="sessionService"/>
 		<property name="cartFacade" ref="cartFacade"/>
 		<property name="forceDefaultTargetForUiExperienceLevel">
-			<map key-type="de.hybris.platform.acceleratorservices.enums.UiExperienceLevel" value-type="java.lang.Boolean">
+			<map key-type="de.hybris.platform.commerceservices.enums.UiExperienceLevel" value-type="java.lang.Boolean">
 				<entry key="DESKTOP" value="false"/>
 				<entry key="MOBILE" value="false"/>
 			</map>
@@ -224,7 +224,7 @@
 		<property name="sessionService" ref="sessionService"/>
 		<property name="cartFacade" ref="cartFacade"/>
 		<property name="forceDefaultTargetForUiExperienceLevel">
-			<map key-type="de.hybris.platform.acceleratorservices.enums.UiExperienceLevel" value-type="java.lang.Boolean">
+			<map key-type="de.hybris.platform.commerceservices.enums.UiExperienceLevel" value-type="java.lang.Boolean">
 				<entry key="DESKTOP" value="true"/>
 				<entry key="MOBILE" value="true"/>
 			</map>
@@ -278,6 +278,8 @@
 	</bean>
 
 	<bean id="rememberMeServices" class="org.training.storefront.security.TrainingRememberMeServices" >
+		<constructor-arg type="java.lang.String" value="trainingstorefront"/>
+		<constructor-arg type="org.springframework.security.core.userdetails.UserDetailsService" ref="originalUidUserDetailsService"/>
 		<property name="userDetailsService" ref="originalUidUserDetailsService" />
 		<property name="key" value="trainingstorefront" />
 		<property name="cookieName" value="trainingstorefrontRememberMe" />

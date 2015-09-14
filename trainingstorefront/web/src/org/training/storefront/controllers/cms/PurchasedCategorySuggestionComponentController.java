@@ -30,7 +30,7 @@ import org.training.storefront.controllers.ControllerConstants;
 public class PurchasedCategorySuggestionComponentController extends
 		AbstractCMSComponentController<PurchasedCategorySuggestionComponentModel>
 {
-	@Resource(name = "simpleSuggestionFacade")
+	@Resource(name = "simpleStoreFrontSuggestionFacade")
 	private SimpleSuggestionFacade simpleSuggestionFacade;
 
 	@Override

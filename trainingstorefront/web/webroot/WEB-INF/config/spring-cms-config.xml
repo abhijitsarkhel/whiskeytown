@@ -23,7 +23,7 @@
 	 This data can be used to render contextual CMS components.
 	-->
 	<alias alias="requestContextData" name="defaultRequestContextData" />
-	<bean id="defaultRequestContextData" class="de.hybris.platform.acceleratorcms.data.RequestContextData" scope="request"/>
+	<bean id="defaultRequestContextData" class="de.hybris.platform.acceleratorservices.data.RequestContextData" scope="request"/>
 
 	<!-- Converter that creates the CMS Restriction Data -->
 	<bean id="requestContextRestrictionConverter" class="org.training.storefront.util.RequestContextRestrictionConverter" >

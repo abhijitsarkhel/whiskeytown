@@ -306,13 +306,13 @@
 	</bean>
 
 	<!-- Simple Suggestion Service -->
-	<alias alias="simpleSuggestionService" name="defaultSimpleSuggestionService" />
-	<bean id="defaultSimpleSuggestionService"
+	<alias alias="simpleTrainingSuggestionService" name="defaultSimpleTrainingSuggestionService" />
+	<bean id="defaultSimpleTrainingSuggestionService"
 		class="org.training.core.suggestion.impl.DefaultSimpleSuggestionService">
-		<property name="simpleSuggestionDao" ref="simpleSuggestionDao" />
+		<property name="simpleSuggestionDao" ref="simpleTrainingSuggestionDao" />
 	</bean>
-	<alias alias="simpleSuggestionDao" name="defaultSimpleSuggestionDao" />
-	<bean id="defaultSimpleSuggestionDao"
+	<alias alias="simpleTrainingSuggestionDao" name="defaultSimpleTrainingSuggestionDao" />
+	<bean id="defaultSimpleTrainingSuggestionDao"
 		class="org.training.core.suggestion.dao.impl.DefaultSimpleSuggestionDao"
 		parent="abstractItemDao">
 		<property name="flexibleSearchService" ref="flexibleSearchService" />

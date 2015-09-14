@@ -31,7 +31,7 @@ import org.training.storefront.controllers.ControllerConstants;
 /**
  * @author abhijit.s Controller for CMS CartSuggestionComponent
  */
-@Controller("CartSuggestionComponentController")
+@Controller("SimpleCartSuggestionComponentController")
 @Scope("tenant")
 @RequestMapping(value = ControllerConstants.Actions.Cms.CartSuggestionComponent)
 public class CartSuggestionComponentController extends AbstractCMSComponentController<CartSuggestionComponentModel>
@@ -39,7 +39,7 @@ public class CartSuggestionComponentController extends AbstractCMSComponentContr
 	@Resource(name = "cartFacade")
 	private CartFacade cartFacade;
 
-	@Resource(name = "simpleSuggestionFacade")
+	@Resource(name = "simpleStoreFrontSuggestionFacade")
 	private SimpleSuggestionFacade simpleSuggestionFacade;
 
 	@Override

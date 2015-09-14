@@ -80,9 +80,9 @@
 	       <aop:pointcut id="profiledMethods" expression="execution(* *(..))" />
 	  -->
 	<!-- Facades -->
-	<alias alias="simpleSuggestionFacade" name="defaultSimpleSuggestionFacade"/>
-	<bean id="defaultSimpleSuggestionFacade" class="org.training.facades.suggestion.impl.DefaultSimpleSuggestionFacade" >
-		<property name="simpleSuggestionService" ref="simpleSuggestionService"/>
+	<alias alias="simpleStoreFrontSuggestionFacade" name="defaultSimpleStoreFrontSuggestionFacade"/>
+	<bean id="defaultSimpleStoreFrontSuggestionFacade" class="org.training.facades.suggestion.impl.DefaultSimpleSuggestionFacade" >
+		<property name="simpleSuggestionService" ref="simpleTrainingSuggestionService"/>
 		<property name="userService" ref="userService"/>
 		<property name="categoryService" ref="categoryService"/>
 		<property name="productService" ref="productService"/>
